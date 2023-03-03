@@ -1,3 +1,7 @@
+<?php
+$action = ['+'=>'Сложить','-'=>'Вычесть','*'=>'Умножить','/'=>'Разделить'];
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,18 +12,15 @@
     <title>Calculator</title>
 </head>
 <body>
-<?php
-    $action = ['+','-','*','/'];
-?>
 <h2>Введите числа и выберите знак</h2>
 <form style="display: flex" action="/calculator/actions.php" method="post">
-    <input type="number" name="Number_1">
+    <input type="number" name="number_1">
     <select name="action">
-        <?php foreach ($action as $sign): ?>
-        <option value="<?=$sign?>"><?=$sign?></option>
-            <?php endforeach; ?>
+         <?php foreach ($action as $key => $sign):?>
+            <option value="<?=$key?>"><?=$sign?></option>
+         <?php endforeach; ?>
     </select>
-    <input type="number" name="Number_2">
+    <input type="number" name="number_2">
     <input type="submit" value="Отправить">
 </form>
 </body>

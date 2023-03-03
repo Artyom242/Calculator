@@ -1,24 +1,23 @@
 <?php
-
-$Number_1 = $_POST['Number_1'];
-$Number_2 = $_POST['Number_2'];
+$number_1 = $_POST['number_1'];
+$number_2 = $_POST['number_2'];
 $action = $_POST['action'];
 
 switch ($action){
     case "+":
-        $answer = $Number_1 + $Number_2;
+        $answer = $number_1 + $number_2;
         break;
 
     case '-':
-        $answer = $Number_1 - $Number_2;
+        $answer = $number_1 - $number_2;
         break;
 
     case '*':
-        $answer = $Number_1 * $Number_2;
+        $answer = $number_1 * $number_2;
         break;
 
     case '/':
-        $answer = $Number_1 / $Number_2;
+        $answer = $number_1 / $number_2;
         break;
     default:
         echo 'Операция не поддерживается';
