@@ -14,13 +14,13 @@ $action = ['+'=>'Сложить','-'=>'Вычесть','*'=>'Умножить','
 <body>
 <h2>Введите числа и выберите знак</h2>
 <form style="display: flex" action="/calculator/actions.php" method="post">
-    <input type="number" name="number_1">
+    <input type="number" name="numberOne">
     <select name="action">
          <?php foreach ($action as $key => $sign):?>
             <option value="<?=$key?>"><?=$sign?></option>
          <?php endforeach; ?>
     </select>
-    <input type="number" name="number_2">
+    <input type="number" name="numberTwo">
     <input type="submit" value="Отправить">
 </form>
 </body>
